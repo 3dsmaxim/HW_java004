@@ -37,7 +37,8 @@ public class HW_java004 {
             result += Integer.parseInt(str);
 
         }
-        System.out.printf("Сумма элементов линкид-листа ровна %d", result);
+        System.out.printf("Сумма элементов " + l + " = %d", result);
+        System.out.println();
         System.out.println();
     }
 
@@ -48,22 +49,49 @@ public class HW_java004 {
         LinkedList<String> FyrstLL = AddElement(10, 6);
         System.out.println(FyrstLL);
         System.out.println(ReversLinkedList(FyrstLL));
+        System.out.println();
 
         // 2. Реализуйте очередь с помощью LinkedList со следующими методами:
         // enqueue() - помещает элемент в конец очереди,
         // dequeue() - возвращает первый элемент из очереди и удаляет его,
         // first() - возвращает первый элемент из очереди, не удаляя.
+        qQueue qQ = new qQueue();
+                qQ.enqueue("1");
+                qQ.enqueue("2");
+                qQ.enqueue("3");
+                qQ.enqueue("4");
+                
+                System.out.println(qQ.first());
+                System.out.println(qQ.dequeue());
+                System.out.println(qQ.first());
+                System.out.println(qQ.dequeue());
+                System.out.println(qQ.first());
+                System.out.println(qQ.dequeue());
+                System.out.println(qQ.first());
+                System.out.println(qQ.dequeue());
+                System.out.println();
 
+
+
+
+
+
+
+        
         // 3. Найдите сумму всех элементов LinkedList, сохраняя все элементы в списке.
         // Используйте итератор
-
+        
         SummElementLinList(FyrstLL);
-        qQueue q = new qQueue();
+
+
+
+        // *реализовать вторую задачу через собственный класс используя в основе массив
+        qQueueTwo q = new qQueueTwo();
         q.enqueue("1");
         q.enqueue("2");
         q.enqueue("3");
         q.enqueue("4");
-
+        
         System.out.println(q.first());
         System.out.println(q.dequeue());
         System.out.println(q.first());
@@ -72,6 +100,5 @@ public class HW_java004 {
         System.out.println(q.dequeue());
         System.out.println(q.first());
         System.out.println(q.dequeue());
-
     }
 }
